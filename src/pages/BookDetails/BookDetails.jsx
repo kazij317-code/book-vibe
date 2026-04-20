@@ -237,7 +237,8 @@ const BookDetails = () => {
     const { bookId: bookParamsId } = useParams()
     // console.log('bookId', typeof bookParamsId);
   
-    const books = useLoaderData();
+    // const books = useLoaderData();
+    const books = useLoaderData() || [];
     // console.log('books', books);
     
     

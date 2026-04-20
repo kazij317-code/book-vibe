@@ -5,7 +5,8 @@ import React, { use } from 'react';
 import BookCard from './ui/BookCard';
 
 // (3)
-const booksPromise = fetch("/booksData.json").then((res) => res.json());
+// const booksPromise = fetch("/booksData.json").then((res) => res.json());
+const booksPromise = fetch(`${import.meta.env.BASE_URL}booksData.json`).then((res) => res.json());
 const AllBooks = () => {
     // (4)st
     const books = use(booksPromise)
